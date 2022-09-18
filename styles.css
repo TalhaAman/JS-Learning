@@ -5,7 +5,7 @@
 body {
   /* for form submit */
   background-color: rgb(225, 226, 228);
-  
+
 }
 .signup-form {
   max-width: 250px;
@@ -17,4 +17,13 @@ input {
   display: block;
   margin: 10px auto;
   padding: 5px;
+}
+#username:focus-visible {
+  outline: none;
+}
+.success {
+  border: 2px solid green;
+}
+.error {
+  border: 2px solid red;
 }

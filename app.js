@@ -49,30 +49,72 @@
 
 
 
-// Map method of Array methods
-const prices = [10,20,25,30,35,50,60];
-const salePrices = prices.map(price => {
-  if(price > 30){
-    return price/2;
-  } else {
-    return price;
-  }
-})
-console.log(salePrices);
+// // Map method of Array methods
+// const prices = [10,20,25,30,35,50,60];
+// const salePrices = prices.map(price => {
+//   if(price > 30){
+//     return price/2;
+//   } else {
+//     return price;
+//   }
+// })
+// console.log(salePrices);
 
-const products = [
-  {name: 'soap', price: 80},
-  {name: 'shampoo', price: 150},
-  {name: 'buscuits', price: 60},
-  {name: 'vegetables', price: 120},
-  {name: 'fruits', price: 250}
-];
-const saleProducts = products.map(product => {
-  if(product.price > 100){
-    // product.price = product.price / 2; //This is destructive so we are not using this 
-    return {name: product.name, price: product.price/2}
-  } else {
-    return product;
+// const products = [
+//   {name: 'soap', price: 80},
+//   {name: 'shampoo', price: 150},
+//   {name: 'buscuits', price: 60},
+//   {name: 'vegetables', price: 120},
+//   {name: 'fruits', price: 250}
+// ];
+// const saleProducts = products.map(product => {
+//   if(product.price > 100){
+//     // product.price = product.price / 2; //This is destructive so we are not using this 
+//     return {name: product.name, price: product.price/2}
+//   } else {
+//     return product;
+//   }
+// })
+// console.log(saleProducts);
+
+
+
+// Reduce method of Array methods
+const marks = [10,20,25,30,35,50,60];
+const passingMarks = marks.reduce((acc, curr) => {
+  if(curr > 30){
+    acc++;
   }
-})
-console.log(saleProducts);
+  return acc;
+}, 0);
+console.log(passingMarks);
+
+const points = [
+  {name: 'sameer', score: 50},
+  {name: 'pk', score: 60},
+  {name: 'asnan', score: 70},
+  {name: 'huzi', score: 80},
+  {name: 'sameer', score: 50},
+  {name: 'pk', score: 30},
+  {name: 'asnan', score: 70},
+  {name: 'huzi', score: 10},
+  {name: 'sameer', score: 30},
+  {name: 'pk', score: 60},
+  {name: 'asnan', score: 70},
+  {name: 'huzi', score: 40},
+  {name: 'sameer', score: 10},
+  {name: 'pk', score: 60},
+  {name: 'asnan', score: 50},
+  {name: 'huzi', score: 20},
+  {name: 'sameer', score: 50},
+  {name: 'pk', score: 60},
+  {name: 'asnan', score: 70},
+  {name: 'huzi', score: 50},
+];
+const totalPoints = points.reduce((acc, curr) => {
+  if(curr.name === 'pk'){
+    acc += curr.score;
+  }
+  return acc;
+},0)
+console.log(totalPoints);

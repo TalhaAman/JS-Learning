@@ -3,7 +3,9 @@
   padding: 0;
 }
 body {
+  /* for form submit */
   background-color: rgb(225, 226, 228);
+  
 }
 .signup-form {
   max-width: 250px;

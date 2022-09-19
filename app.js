@@ -79,42 +79,74 @@
 
 
 
-// Reduce method of Array methods
-const marks = [10,20,25,30,35,50,60];
-const passingMarks = marks.reduce((acc, curr) => {
-  if(curr > 30){
-    acc++;
-  }
-  return acc;
-}, 0);
-console.log(passingMarks);
+// // Reduce method of Array methods
+// const marks = [10,20,25,30,35,50,60];
+// const passingMarks = marks.reduce((acc, curr) => {
+//   if(curr > 30){
+//     acc++;
+//   }
+//   return acc;
+// }, 0);
+// console.log(passingMarks);
+
+// const points = [
+//   {name: 'sameer', score: 50},
+//   {name: 'pk', score: 60},
+//   {name: 'asnan', score: 70},
+//   {name: 'huzi', score: 80},
+//   {name: 'sameer', score: 50},
+//   {name: 'pk', score: 30},
+//   {name: 'asnan', score: 70},
+//   {name: 'huzi', score: 10},
+//   {name: 'sameer', score: 30},
+//   {name: 'pk', score: 60},
+//   {name: 'asnan', score: 70},
+//   {name: 'huzi', score: 40},
+//   {name: 'sameer', score: 10},
+//   {name: 'pk', score: 60},
+//   {name: 'asnan', score: 50},
+//   {name: 'huzi', score: 20},
+//   {name: 'sameer', score: 50},
+//   {name: 'pk', score: 60},
+//   {name: 'asnan', score: 70},
+//   {name: 'huzi', score: 50},
+// ];
+// const totalPoints = points.reduce((acc, curr) => {
+//   if(curr.name === 'pk'){
+//     acc += curr.score;
+//   }
+//   return acc;
+// },0)
+// console.log(totalPoints);
+
+
+
+//Find Method of Array Methods
+// const numbers = [10,20,25,30,35,50,60];
+// const specificNumber = numbers.find(number => {
+//   return number > 40;
+// })
+// console.log(specificNumber);
+
+
+
+//Sort Method of Array methods
+const friends = ['sameer','pk','athar','asnan','huzi'];
+const friendsAscend = friends.sort();
+console.log(friendsAscend);
+const friendsDescend = friends.reverse();
+console.log(friendsDescend);
 
 const points = [
   {name: 'sameer', score: 50},
-  {name: 'pk', score: 60},
-  {name: 'asnan', score: 70},
-  {name: 'huzi', score: 80},
-  {name: 'sameer', score: 50},
-  {name: 'pk', score: 30},
-  {name: 'asnan', score: 70},
-  {name: 'huzi', score: 10},
-  {name: 'sameer', score: 30},
-  {name: 'pk', score: 60},
-  {name: 'asnan', score: 70},
+  {name: 'pk', score: 90},
+  {name: 'asnan', score: 100},
   {name: 'huzi', score: 40},
-  {name: 'sameer', score: 10},
-  {name: 'pk', score: 60},
-  {name: 'asnan', score: 50},
-  {name: 'huzi', score: 20},
-  {name: 'sameer', score: 50},
-  {name: 'pk', score: 60},
-  {name: 'asnan', score: 70},
-  {name: 'huzi', score: 50},
-];
-const totalPoints = points.reduce((acc, curr) => {
-  if(curr.name === 'pk'){
-    acc += curr.score;
+  {name: 'sameer', score: 30},
+]
+points.sort((a,b) => {
+  if(a.score > b.score){
+    return b.score - a.score;
   }
-  return acc;
-},0)
-console.log(totalPoints);
+})
+console.log(points);

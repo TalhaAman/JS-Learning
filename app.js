@@ -130,23 +130,52 @@
 
 
 
-//Sort Method of Array methods
-const friends = ['sameer','pk','athar','asnan','huzi'];
-const friendsAscend = friends.sort();
-console.log(friendsAscend);
-const friendsDescend = friends.reverse();
-console.log(friendsDescend);
+// //Sort Method of Array methods
+// const friends = ['sameer','pk','athar','asnan','huzi'];
+// const friendsAscend = friends.sort();
+// console.log(friendsAscend);
+// const friendsDescend = friends.reverse();
+// console.log(friendsDescend);
 
-const points = [
-  {name: 'sameer', score: 50},
-  {name: 'pk', score: 90},
-  {name: 'asnan', score: 100},
-  {name: 'huzi', score: 40},
-  {name: 'sameer', score: 30},
-]
-points.sort((a,b) => {
-  if(a.score > b.score){
-    return b.score - a.score;
-  }
-})
-console.log(points);
+// const points = [
+//   {name: 'sameer', score: 50},
+//   {name: 'pk', score: 90},
+//   {name: 'asnan', score: 100},
+//   {name: 'huzi', score: 40},
+//   {name: 'sameer', score: 30},
+// ]
+// points.sort((a,b) => {
+//   if(a.score > b.score){
+//     return b.score - a.score;
+//   }
+// })
+// console.log(points);
+
+
+
+//Dates & Times
+const now = new Date().getTime();
+console.log(now);
+
+const ago = new Date('August 14 2022 8:00:43');
+const today = new Date();
+const diff = today - ago;
+const hours = Math.round(diff / 1000 / 3600);
+const day = Math.round(hours/24);
+console.log(day);
+console.log(`published ${day} days ago`);
+
+
+
+// Digital clock 
+const clock = document.querySelector('.clock');
+const tick = () => {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+
+  const html = `${hours} : ${minutes} : ${seconds}`;
+  clock.innerHTML = html;
+}
+setInterval(tick, 1000);
